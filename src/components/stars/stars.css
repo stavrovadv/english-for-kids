@@ -1,0 +1,16 @@
+.stars {
+  width: 100%;
+  height: 30px;
+}
+
+.stars__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.stars__item {
+  width: 30px;
+  height: 30px;
+}

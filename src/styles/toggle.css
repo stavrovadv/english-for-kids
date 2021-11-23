@@ -1,0 +1,74 @@
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+}
+
+.toggle__input {display:none;}
+
+.toggle__content {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4fc3c7;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle__content:hover {
+  background: linear-gradient(to top right, #4fc3c7 10%, #e1dd1b 70%);
+}
+
+.toggle__content:after {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 7px;
+  bottom: 7px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle__input:checked + .toggle__content {
+  background-color: #d0d72f;
+}
+
+.toggle__input:focus + .toggle__content {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.toggle__input:checked + .toggle__content:after {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(55px);
+}
+
+/*------ ADDED CSS ---------*/
+.toggle__content:before
+{
+ content:'TRAIN';
+ color: white;
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 50%;
+ font-size: 11px;
+ font-weight: bold;
+}
+
+.toggle__input:checked + .toggle__content:before
+{  
+  content:'PLAY';
+  left: 40%;
+}
+
+/*--------- END --------*/

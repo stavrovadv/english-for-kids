@@ -1,0 +1,12 @@
+.notFound {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.notFound__image {
+  max-width: 100%;
+}

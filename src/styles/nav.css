@@ -1,0 +1,39 @@
+.sidebar {
+  width: 25%;
+  background: var(--gradient);
+  padding: 5%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  opacity: 1;
+  position: relative;
+  left: 0;
+  transition: opacity 1.5s;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 80%;
+    z-index: 1;
+  }
+}
+
+.sidebar.hidden {
+  position: absolute;
+  opacity: 0;
+  left: -1000px;
+}
+
+.nav__item {
+  margin-top: 3px;
+}
+
+.nav__item--active {
+  color: #4fc3c7;
+}
